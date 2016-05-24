@@ -1,0 +1,3 @@
+$("input#new_task").val("");
+$("#incomplete_tasks").prepend("<%= j render(@task)%>");
+$("#edit_task_<%= @task.id%>").submitOnCheck();

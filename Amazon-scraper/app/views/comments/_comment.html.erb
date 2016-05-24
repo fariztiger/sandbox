@@ -1,0 +1,5 @@
+<h3><%= comment.commenter %>:</h3>
+<p>
+  <%= comment.body %>
+  <%= link_to 'Delete', [comment.article, comment], method: :delete %>
+</p>

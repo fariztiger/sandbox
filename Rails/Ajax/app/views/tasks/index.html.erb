@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Add a new task:</h1>
+<%= form_for @task, remote: true do |f| %>
+  <%= f.text_field :name, id: "new_task" %>
+  <%= f.submit "Add Task" %>
+<% end %>
+
+<h1>To-do's:</h1>
+  <ul id = "incomplete_tasks">
+    <%= render @tasks.incomplete.order('updated_at ASC') %>
+  </ul>
+
+<h1>Done:</h1>
+  <ul id = "complete_tasks">
+    <%= render @tasks.complete.order('updated_at ASC') %>
+  </ul>
