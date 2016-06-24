@@ -1,0 +1,23 @@
+{
+  "name": "sandbox",
+  "homepage": "https://github.com/lexi89/sandbox",
+  "authors": [
+    "Alexey Yanovski <alexey.yanovski1@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "jquery": "^3.0.0",
+    "normalize-css": "^4.1.1",
+    "backbone-localstorage": "^0.3.2"
+  }
+}
