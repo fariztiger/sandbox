@@ -2,9 +2,12 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <h4>Show me the forecast for...</h4>
-    <div class="form-group">
-      <input type="text" class = "form-control" ng-model = "city">
-    </div>
-    <a href="#/forecast" class = "btn btn-primary">Go!</a>
+    <form ng-submit = "submit()">
+      <div class="form-group">
+        <input type="text" class = "form-control" ng-model = "city">
+      </div>
+      <input type = "submit" class = "btn btn-primary" value = "Go!"/>
+    </form>
+
   </div>
 </div>
