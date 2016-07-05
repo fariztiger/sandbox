@@ -1,0 +1,137 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--',
+1 verbose cli   'save',
+1 verbose cli   'passport',
+1 verbose cli   'passport-local' ]
+2 info using npm@3.8.6
+3 info using node@v5.12.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData save
+8 silly fetchPackageMetaData passport@^0.3.2
+9 silly fetchPackageMetaData passport-local@^1.0.0
+10 silly fetchNamedPackageData passport
+11 silly mapToRegistry name passport
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry data Result {
+14 silly mapToRegistry   raw: 'passport',
+14 silly mapToRegistry   scope: null,
+14 silly mapToRegistry   name: 'passport',
+14 silly mapToRegistry   rawSpec: '',
+14 silly mapToRegistry   spec: 'latest',
+14 silly mapToRegistry   type: 'tag' }
+15 silly mapToRegistry uri https://registry.npmjs.org/passport
+16 silly fetchNamedPackageData passport-local
+17 silly mapToRegistry name passport-local
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry data Result {
+20 silly mapToRegistry   raw: 'passport-local',
+20 silly mapToRegistry   scope: null,
+20 silly mapToRegistry   name: 'passport-local',
+20 silly mapToRegistry   rawSpec: '',
+20 silly mapToRegistry   spec: 'latest',
+20 silly mapToRegistry   type: 'tag' }
+21 silly mapToRegistry uri https://registry.npmjs.org/passport-local
+22 silly fetchNamedPackageData save
+23 silly mapToRegistry name save
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'save',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'save',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/save
+28 verbose request uri https://registry.npmjs.org/save
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 5:20:25 PM
+31 verbose request id 80997d68d8ac261a
+32 http request GET https://registry.npmjs.org/save
+33 verbose request uri https://registry.npmjs.org/passport-local
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 5:20:25 PM
+36 verbose etag "2TS8IMNU5EM6FD8UEXEYB1HR"
+37 http request GET https://registry.npmjs.org/passport-local
+38 verbose request uri https://registry.npmjs.org/passport
+39 verbose request no auth needed
+40 info attempt registry request try #1 at 5:20:25 PM
+41 verbose etag "2N2QTWNTJKONE9XYJPG649UGK"
+42 http request GET https://registry.npmjs.org/passport
+43 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 192.168.1.250:443
+44 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 192.168.1.250:443
+45 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 192.168.1.250:443
+46 info attempt registry request try #2 at 5:20:40 PM
+47 http request GET https://registry.npmjs.org/save
+48 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 192.168.1.250:443
+49 info attempt registry request try #2 at 5:20:40 PM
+50 verbose etag "2TS8IMNU5EM6FD8UEXEYB1HR"
+51 http request GET https://registry.npmjs.org/passport-local
+52 info attempt registry request try #2 at 5:20:40 PM
+53 verbose etag "2N2QTWNTJKONE9XYJPG649UGK"
+54 http request GET https://registry.npmjs.org/passport
+55 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 192.168.1.250:443
+56 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 192.168.1.250:443
+57 info attempt registry request try #3 at 5:21:40 PM
+58 http request GET https://registry.npmjs.org/save
+59 silly fetchPackageMetaData Error: connect ECONNREFUSED 192.168.1.250:443
+59 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:893:11)
+59 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:916:20)
+59 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1075:14)
+59 silly fetchPackageMetaData  error for save { [Error: connect ECONNREFUSED 192.168.1.250:443]
+59 silly fetchPackageMetaData   code: 'ECONNREFUSED',
+59 silly fetchPackageMetaData   errno: 'ECONNREFUSED',
+59 silly fetchPackageMetaData   syscall: 'connect',
+59 silly fetchPackageMetaData   address: '192.168.1.250',
+59 silly fetchPackageMetaData   port: 443 }
+60 info attempt registry request try #3 at 5:21:40 PM
+61 verbose etag "2TS8IMNU5EM6FD8UEXEYB1HR"
+62 http request GET https://registry.npmjs.org/passport-local
+63 info attempt registry request try #3 at 5:21:40 PM
+64 verbose etag "2N2QTWNTJKONE9XYJPG649UGK"
+65 http request GET https://registry.npmjs.org/passport
+66 silly get cb [ 304, undefined ]
+67 verbose etag https://registry.npmjs.org/passport-local from cache
+68 verbose get saving passport-local to /home/alexey/.npm/registry.npmjs.org/passport-local/.cache.json
+69 verbose correctMkdir /home/alexey/.npm correctMkdir not in flight; initializing
+70 silly get cb [ 304, undefined ]
+71 verbose etag https://registry.npmjs.org/passport from cache
+72 verbose get saving passport to /home/alexey/.npm/registry.npmjs.org/passport/.cache.json
+73 verbose correctMkdir /home/alexey/.npm correctMkdir already in flight; waiting
+74 silly rollbackFailedOptional Starting
+75 silly rollbackFailedOptional Finishing
+76 silly runTopLevelLifecycles Starting
+77 silly runTopLevelLifecycles Finishing
+78 silly install printInstalled
+79 verbose stack Error: connect ECONNREFUSED 192.168.1.250:443
+79 verbose stack     at Object.exports._errnoException (util.js:893:11)
+79 verbose stack     at exports._exceptionWithHostPort (util.js:916:20)
+79 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1075:14)
+80 verbose cwd /home/alexey/Dropbox/Websites/sandbox/nodeTodo
+81 error Linux 4.5.0-040500-generic
+82 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "--" "save" "passport" "passport-local"
+83 error node v5.12.0
+84 error npm  v3.8.6
+85 error code ECONNREFUSED
+86 error errno ECONNREFUSED
+87 error syscall connect
+88 error Error: connect ECONNREFUSED 192.168.1.250:443
+88 error     at Object.exports._errnoException (util.js:893:11)
+88 error     at exports._exceptionWithHostPort (util.js:916:20)
+88 error     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1075:14)
+88 error  { [Error: connect ECONNREFUSED 192.168.1.250:443]
+88 error   code: 'ECONNREFUSED',
+88 error   errno: 'ECONNREFUSED',
+88 error   syscall: 'connect',
+88 error   address: '192.168.1.250',
+88 error   port: 443 }
+89 error If you are behind a proxy, please make sure that the
+89 error 'proxy' config is set properly.  See: 'npm help config'
+90 verbose exit [ 1, true ]
