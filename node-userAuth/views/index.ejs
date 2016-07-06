@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "app">
+<head>
+  <meta charset="UTF-8">
+  <title>Homepage</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js" charset="utf-8"></script>
+</head>
+<body ng-controller = "ctrl">
+  <% if (locals.message) { %>
+    <h1><%= message %></h1>
+  <% } %>
+
+  Please either <a href="/login">login</a> or <a href="/register">register</a>
+
+  <p>{{hello}}</p>
+
+  <script src="/app.js" charset="utf-8"></script>
+</body>
+</html>
