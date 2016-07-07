@@ -11,18 +11,21 @@ var app = angular.module("app", [])
         url: "/api/todos/test"
       }).then(function(response){
         $scope.todos = response.data;
-        console.log(response.data)
       });
+    };
+
+    $scope.showForm = false;
+
+    $scope.toggleForm = function() {
+      $scope.showForm = true;
     };
 
     $scope.resetForm = function(){
       $scope.newTodo = "";
-      $scope.todoForm.$setPristine();
+      // $scope.todoForm.$setPristine();
     };
 
     $scope.addTodo = function(e){
-      console.log("sending off the form...")
-      console.log($scope.newTodo)
       // create a new todo
       var newTodo = {
         "username" : "test",
@@ -32,9 +35,8 @@ var app = angular.module("app", [])
       };
 
       // add it to scope.todos
-      // $scope.todos.push(newTodo);
 
-      // clear input
+      // clear the form
       $scope.resetForm();
 
       // save it to database.
@@ -49,14 +51,10 @@ var app = angular.module("app", [])
     };
 
     $scope.deleteTodo = function(){
-
       // delete from database. DIDNT specify the content type in this request. Spent an hour debugging.
       $http.delete("/api/todo", {headers: {'Content-Type': 'application/JSON'}, data:{"id": this.item._id}});
-
       // refresh todos
       $scope.getTodos();
     };
-
-
 
   });

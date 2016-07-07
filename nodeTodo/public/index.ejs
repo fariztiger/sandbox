@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.css">
+  <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+  <div ng-controller = "ctrl" ng-init = "getTodos()">
+    <div class="row">
+      <h1>From MongoDb:</h1>
+      <p><% if (locals.message) { %><%=  message %> <% } %>
+      </p>
+
+      <ul>
+        <li ng-repeat="item in todos">
+          {{item.todo}} <a href="" ng-click = "deleteTodo()">[Delete]</a>
+        </li>
+      </ul>
+    </div>
+
+  <div class="row">
+    <div class="small-4 columns">
+      <form name = "todoForm" ng-submit = "addTodo()">
+        <input type="text" placeholder = "Add a todo" ng-model = "newTodo">
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-4 columns">
+      <div>
+        <p>Want to save your todos?</p>
+        <p><a ng-click = "toggleForm()">Register</a> or <a ng-click = "toggleForm()">Login</a></p>
+      </div>
+    </div>
+
+  </div>
+  <div class="row" ng-show = "showForm">
+    <form action="/login" method = "POST" class = "small-2 columns">
+      <label for="">Name</label>
+      <input type="text" name = "name">
+      <label for="">Password</label>
+      <input type="password" name = "password">
+      <input type="submit">
+    </form>
+  </div>
+
+</div>    <!-- controller -->
+
+<script src = "/public/app.js"></script>
+</body>
+</html>
