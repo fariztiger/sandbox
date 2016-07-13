@@ -1,25 +1,24 @@
 var app = angular.module("app", [])
   .controller("ctrl", function($scope, $http){
-    var self = this;
-
     $scope.showForm = false;
-    $scope.showLogin = true;
-    $scope.showLoginForm = false;
+    $scope.showLogin = false;
     $scope.showRegisterForm = false;
-    $scope.currentUser = null
+    $scope.currentUser = null;
     $scope.newTodo = "";
-    $scope.tempTodos = []
+    $scope.tempTodos = [];
+    $scope.todos = [];
+    $scope.showLoginForm = false;
 
     $scope.init = function () {
       this.getCurrentUser();
     };
 
     $scope.toggleLoginForm = function() {
-      $scope.showLoginForm = true;
+      $scope.showLoginForm = (!$scope.LoginForm);
     };
 
     $scope.toggleRegisterForm = function() {
-      $scope.showRegisterForm = true;
+      $scope.showRegisterForm = (!$scope.showRegisterForm);
     };
 
     $scope.resetForm = function(){
@@ -38,7 +37,7 @@ var app = angular.module("app", [])
       });
     };
 
-    $scope.submitLogin = function(){
+    $scope.submitLogin = function(){ // existing user
       $http({
         method: "POST",
         url: "/login",
@@ -48,8 +47,8 @@ var app = angular.module("app", [])
         }
       }).then(function (success) {
         $scope.currentUser = success.data.name; // set current user
-        $scope.showLogin = false; // hide login form
         $scope.saveTempTodos();
+        $scope.showLogin = false; // hide login form
         $scope.getTodos(); // fetch todos
         // add user to the temp todo's
       }, function (err) {
@@ -62,12 +61,12 @@ var app = angular.module("app", [])
       // add user's name to each todo
       for (i = 0; i < $scope.tempTodos.length; i++){
         $scope.tempTodos[i].username = $scope.currentUser;
-        $http({ // if user's logged in, save the todo to the database.
+        $scope.todos.push($scope.tempTodos[i])
+        $http({ // save to mongo
           method: "POST",
           url: "/api/todo",
           data: $scope.tempTodos[i]
         });
-        console.log("saved tempTodos " + i);
       };
     };
 
@@ -81,13 +80,11 @@ var app = angular.module("app", [])
         }
       }).then(function (success) {
         $scope.currentUser = success.data.name;
+        $scope.saveTempTodos();
         $scope.showLogin = false;
         $scope.getTodos();
-        $scope.saveTempTodos();
-        $scope.getTodos();
       }, function (err) {
-        console.log(err.data)
-        // display errors
+        $scope.formErrors = err.data;
       });
     };
 
@@ -112,19 +109,37 @@ var app = angular.module("app", [])
       // if user is new, add to temp todos
       if (!$scope.currentUser){
         $scope.tempTodos.push(newTodo);
+        if ($scope.tempTodos.length > 3){ // show the login form after 3 todos
+          $scope.showLogin = true;
+        };
       } else {
+        console.log("making a DB call")
         $scope.todos.push(newTodo);
         $http({ // if user's logged in, save the todo to the database.
           method: "POST",
           url: "/api/todo",
           data: newTodo
+        }).then(function(success){
+          console.log(success.data)
+        }, function (err) {
+          $scope.todoErrors = "Couldn't connect to DB... :("
+          console.log(err.data)
         });
       };
-      $scope.getTodos();// refresh todos
     };
 
     $scope.deleteTodo = function(){
-      $http.delete("/api/todo", {headers: {'Content-Type': 'application/JSON'}, data:{"id": this.item._id}}); // delete from database. DIDNT specify the content type in this request. Spent an hour debugging.
-      $scope.getTodos();// refresh todos
+      // delete from app memory.
+      $scope.todos.splice(this.$index,1);
+      // delete from DB
+      $http.delete("/api/todo", {
+        headers: {'Content-Type': 'application/JSON'},
+        data:{"id": this.item._id}
+      }).then(function (success) {
+        console.log(success.data);
+      }, function (err) {
+        $scope.todoErrors = "Couldn't connect to DB... :("
+        console.log(err.data);
+      });
     };
   });
