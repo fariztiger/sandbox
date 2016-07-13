@@ -6,8 +6,9 @@ module.exports = function(app){
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended:true}));
 
-  app.get("/api/todos/:uname", function(req, res){
-    Todos.find({ username: req.params.uname },
+  app.get("/api/todos/", function(req, res){
+    console.log("Request from: " + req.body.username)
+    Todos.find({ username: req.session.user.name },
       function(err, todos){
         if (err) throw err;
         res.send(todos);
@@ -37,7 +38,7 @@ module.exports = function(app){
     }
     else{
       var newTodo = Todos({
-        username: "test",
+        username: req.body.username,
         todo: req.body.todo,
         isDone: req.body.isDone,
         hasAttachment: req.body.hasAttachment

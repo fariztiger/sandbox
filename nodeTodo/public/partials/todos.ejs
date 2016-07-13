@@ -1,0 +1,19 @@
+
+<form name = "todoForm" ng-submit = "addTodo()" ng-cloak>
+  <label>Add todos:</label>
+  <input type="text" ng-model = "newTodo">
+</form>
+
+<ul class = "no-bullet" ng-hide = "currentUser">
+  <h3>Temp</h3>
+  <li ng-repeat="item in tempTodos">
+    {{item.todo}} <a ng-click = "tempTodos.splice($index,1)">[Delete]</a>
+  </li>
+</ul>
+
+<ul class = "no-bullet" ng-show = "currentUser">
+  <h2>Database</h2>
+  <li ng-repeat="item in todos">
+    {{item.username}}: {{item.todo}} <a href="" ng-click = "deleteTodo()">[Delete]</a>
+  </li>
+</ul>

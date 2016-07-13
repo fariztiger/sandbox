@@ -1,0 +1,29 @@
+<div class="login-container" ng-show = "showLogin" ng-cloak>
+  <p>Want to save your todos?</p>
+
+  <p><a ng-click = "toggleRegisterForm()">Register</a> or <a ng-click = "toggleLoginForm()">Login</a></p>
+
+  <div ng-show = "showLoginForm">
+    <form ng-submit = "submitLogin()">
+      <label class="callout alert" ng-model = "formErrors" ng-show="formErrors">{{formErrors}}</label>
+      <label for="">Name</label>
+      <input type="text" name = "name" ng-model = "name">
+      <label for="">Password</label>
+      <input type="password" name = "password" ng-model = "password">
+      <input type="submit" class = "button">
+    </form>
+  </div>
+
+
+  <div ng-show = "showRegisterForm">
+    <form ng-submit = "submitRegistration()">
+      <label class="callout alert" ng-model = "formErrors" ng-show="formErrors">{{formErrors}}</label>
+      <label for="">Name</label>
+      <input type="text" name = "name" ng-model = "name">
+      <label for="">Password</label>
+      <input type="password" name = "password" ng-model = "password">
+      <input type="submit" class = "button">
+    </form>
+  </div>
+
+</div>
