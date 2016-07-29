@@ -4,8 +4,8 @@ var reload = browserSync.reload;
 var $    = require('gulp-load-plugins')();
 
 var sassPaths = [
-  'bower_components/foundation-sites/scss',
-  'bower_components/motion-ui/src'
+  './app/bower_components/foundation-sites/scss',
+  './app/bower_components/motion-ui/src'
 ];
 
 
@@ -16,7 +16,7 @@ gulp.task("serve", function(){
       baseDir: "app"
     }
   });
-  gulp.watch(["*.html", "css/*.css"], {cwd: "app"}, reload)
+  gulp.watch(["*.html", "styles/*.css"], {cwd: "app"}, reload)
 });
 
 
@@ -31,8 +31,9 @@ gulp.task('sass', function() {
       browsers: ['last 2 versions', 'ie >= 9']
     }))
     .pipe(gulp.dest('./app/styles'));
+
 });
 
-gulp.task('default', ['sass'], function() {
-  gulp.watch(['scss/**/*.scss'], ['sass']);
+gulp.task('sasswatch', ['sass'], function() {
+  gulp.watch(['./app/scss/**/*.scss'], ['sass']);
 });

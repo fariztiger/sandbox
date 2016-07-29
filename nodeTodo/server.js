@@ -29,7 +29,7 @@ app.use(function(req, res, next){
     next();
   } else {
     next();
-  };
+  }
 });
 
 // if someone requests assets, get them here:

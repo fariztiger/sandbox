@@ -1,0 +1,19 @@
+{
+  "name": "ux-components",
+  "homepage": "https://github.com/lexi89/sandbox",
+  "authors": [
+    "Alexey Yanovski <alexey.yanovski1@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
