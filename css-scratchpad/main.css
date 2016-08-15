@@ -1,0 +1,53 @@
+body{
+  padding:0px;
+  margin:0px;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.section{
+  padding: 20px;
+  background-color: pink;
+  height: 100%;
+  position: relative;
+}
+.section-textbox{
+  background-color: green;
+  width: 60%;
+  float: left;
+  position: absolute;
+  top: 25%;
+}
+.orangebox{
+  border: 5px solid orange;
+}
+
+#one{
+  width: 30%;
+  position:absolute;
+  height: 20%;
+  border-left: 0px;
+  border-top: 0px;
+  top: -10%;
+  left: 20%;
+}
+
+#two{
+  width: 60%;
+  height: 10%;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  border-top: 0px;
+  border-right: 0px;
+}
+
+#three{
+  height: 90%;
+  width: 20px;
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  border-left: 0px;
+  border-bottom: 0px;
+}

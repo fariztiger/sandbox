@@ -1,0 +1,549 @@
+.optin-box-9 {margin-bottom:0px;}
+div.feature-box-creator .feature-box-content {padding:10px}
+
+
+li{
+    font-family: gill-sans-regular !important;
+}
+
+.hero-section{
+height: 100vh;
+font-size: 2.5rem;
+padding-top: 0px !important;
+
+}
+
+.hero-section::before{
+background-image: url(http://emotionalgrit.com/wp-content/uploads/2016/08/mountain-climbing-1.jpeg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+visibility: initial;
+height: 100vh;
+width: 100%;
+content: "";
+display: block;
+position: absolute;
+z-index: -1;
+
+-webkit-filter: saturate(70%); /* Chrome, Safari, Opera */
+filter: saturate(70%);
+
+
+-webkit-filter: brightness(80%); /* Chrome, Safari, Opera */
+filter: brightness(80%);
+}
+
+.hero-section img{
+width: 150px !important;
+margin: 0 auto;
+}
+
+.hero-section .element-container:first-of-type{
+margin-bottom: 10%;
+}
+
+.hero-section .element-container:nth-of-type(2){
+margin-bottom: 1em;
+}
+
+
+.hero-section .fixed-width{
+height: 100%;
+width: auto;
+max-width: 1280px;
+display: flex;
+justify-content: center;}
+
+
+.hero-section .fixed-width .cols{
+width: auto;
+max-width: 90%;
+padding-top: 2em;
+display: flex;
+justify-content:;
+flex-direction: column;
+}
+
+.hero-section h1{
+font-size: 2em;
+}
+
+.hero-section p{
+font-size: 0.7em;
+line-height: 1.25em !important;
+}
+
+#le_body_row_1_col_1_el_3{
+position: relative;
+top:20vh;}
+
+#le_body_row_1_col_1_el_4{
+position:relative;
+top:20vh;}
+
+
+
+
+/* LEADERS SECTION */
+
+.leaders-section{
+    padding-bottom: 0px !important;
+}
+.leaders-section .fixed-width .cols .element-container:not(.leaders){
+width: 90%;
+margin: 0 auto;
+}
+
+.leaders-section h2{
+color: #444;
+}
+
+.leaders-section .op-text-block ul{
+margin-left: 20px !important;
+}
+
+.leaders-section .op-text-block h3{
+color: #444;
+}
+.wp-caption{
+background-color: white;
+text-align: center;
+margin: 10px;
+}
+.wp-caption img{
+border-radius: 50%;}
+
+.leaders-section .element-container:last-child{
+width:75%;
+margin:0 auto;
+}
+
+
+
+.leaders .element .op-text-block{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.inline-list{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+
+}
+
+.inline-list li{
+margin:0px 10px;
+white-space: nowrap;
+list-style-type: none;
+
+}
+
+.inline-list li::before{
+content: "•";
+color: #F29D25;
+margin-right: 10px;
+}
+
+
+.quiz-intro-section .element{
+width: 75%;
+margin: 0 auto;
+}
+
+
+
+
+
+/* quiz styling */
+
+
+.gform_fields li{
+    font-size: 1.5rem !important;
+}
+.gfield_radio label{
+    font-size: 0.75em !important;
+}
+
+.has_first_name{
+width:50% !important;
+}
+.name_first label{
+display:none !important;}
+
+
+.gf_progressbar_wrapper{
+display: none;}
+
+
+.gform_confirmation_message{
+width: 75%;
+margin:0 auto;
+}
+
+.gform_confirmation_message span{
+
+font-size:17px;
+}
+
+.gform_confirmation_message span:first-of-type{
+
+font-size:inherit;
+}
+
+/* circle progress bar */
+
+canvas{
+border: 10px solid #f0efef;
+border-radius: 50%;
+padding:10px;
+    -webkit-box-shadow: inset 0px 0px 0px 25px #e0e1e0;
+    -moz-box-shadow: inset 0px 0px 0px 25px #e0e1e0;
+    box-shadow: inset 0px 0px 0px 25px #e0e1e0;
+}
+
+.chart{
+position:relative;
+display: block;
+
+text-align: center;
+
+}
+
+#graph span{
+position: absolute;
+width:100%;
+display: block;
+font-family: gill-sans-regular;
+font-size: 3em;
+line-height:150px;
+}
+
+.gform_page_footer{
+display: flex;
+justify-content: center;
+}
+.gform_page_footer .button{
+min-width: 140px;
+}
+
+.gform_previous_button{
+margin-bottom: 0px !important;
+background-image: url(http://emotionalgrit.com/wp-content/uploads/2016/08/prev-arrow.png) !important;
+background-size: cover !important;
+text-align: right !important;
+background-repeat: no-repeat !important;
+}
+
+.gform_next_button{
+background-image: url(http://emotionalgrit.com/wp-content/uploads/2016/08/next-arrow.png) !important;
+background-size: cover !important;
+background-repeat: no-repeat !important;
+text-align: left !important;
+padding-left: 2em !important;
+}
+
+    canvas {
+    width: 150px;
+    height: 150px;
+    border: 7px solid #f0efef;
+    border-radius: 50%;
+    padding: 5px;
+    -webkit-box-shadow: inset 0px 0px 0px 15px #e0e1e0;
+    -moz-box-shadow: inset 0px 0px 0px 15px #e0e1e0;
+    box-shadow: inset 0px 0px 0px 15px #e0e1e0;
+    }
+
+.quiz-section{
+    padding-top:0px !important;
+}
+
+.op-text-block p:last-child {
+    font-size: 1.5em;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .fixed-width{
+        width: 90% !important;
+    }
+    .one-column{
+        width: 100% !important;
+    }
+
+}
+
+
+/* Mob portrait */
+@media only screen and (max-width: 480px){
+    .hero-section .cols{
+        padding-top: 0.5em !important;
+        position:relative;
+        width: 100% !important;
+    }
+
+    #le_body_row_1_col_1_el_1 img{
+        max-width: 60px;
+    }
+
+    #le_body_row_1_col_1_el_1{
+        margin:0px;
+        margin-top: 10px;
+    }
+
+    #le_body_row_1_col_1_el_2{
+        position:absolute;
+        top: 15vh;
+    }
+
+#le_body_row_1_col_1_el_2 h2{
+    font-size: 0.75em;
+}
+
+    #le_body_row_1_col_1_el_3{
+        position: absolute;
+        top:50vh;
+        width: 100%;
+    }
+    #le_body_row_1_col_1_el_3 .elemment{
+        text-align: center;
+    }
+
+    #le_body_row_1_col_1_el_4{
+        position: absolute;
+        top:65vh;
+    }
+
+    #le_body_row_1_col_1_el_2 h4{
+        font-size: 0.5em;
+    }
+
+    .hero-section .cols{
+        padding-top: 0.5em !important;
+    }
+    .hero-section h1{
+        font-size: 0.75em;
+    }
+    .hero-section{
+        font-size: 2.2rem;
+    }
+    #le_body_row_1_col_1_el_4 h2{
+        font-size: 0.75em !important;
+    }
+
+    .hero-section::before{
+        height: 120vh;
+        top: -20vh;
+    }
+
+    .leaders .element .op-text-block{
+        display: inline-block;
+        text-align: center !important;
+    }
+
+    figure{
+        max-width:100px !important;
+        padding: 0px !important;
+        display: inline-table !important;
+    }
+    .inline-list{
+        display:block;
+    }
+
+    .leaders-section .op-text-block ul {
+    margin-left: 0px !important;
+
+    }
+
+    .inline-list li {
+    white-space: initial;
+    }
+
+    .leaders-section{
+        padding-bottom: 0px !important;
+    }
+
+
+
+    .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]) {
+    line-height: 1;
+    height:45px;
+    max-width: 50%;
+     }
+
+    .gform_previous_button {
+    margin-bottom: 0px !important;
+    background-image: url(http://emotionalgrit.com/wp-content/uploads/2016/08/prev-arrow.png) !important;
+    background-size: cover !important;
+    text-align: right !important;
+    background-repeat: no-repeat !important;
+
+
+    }
+
+
+}
+
+/* MOBILE LANDSCAPE */
+/* everything up to iphone 6s landscape*/
+@media only screen and (max-width: 737px) and (orientation: landscape) {
+    .fixed-width{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+
+    }
+    .one-column{
+        width: 100% !important;
+        margin: 0 auto;
+    }
+     .hero-section .cols{
+        padding-top: 0.5em !important;
+        position:relative;
+        width: 100% !important;
+    }
+
+    #le_body_row_1_col_1_el_1 img{
+        max-width: 60px;
+    }
+
+    #le_body_row_1_col_1_el_1{
+        margin:0px;
+        margin-top: 0px;
+    }
+
+    #le_body_row_1_col_1_el_2{
+        position:absolute;
+        top: 17vh;
+    }
+
+    #le_body_row_1_col_1_el_2 h2{
+        font-size: 2 rem;
+    }
+
+    #le_body_row_1_col_1_el_3{
+        position: absolute;
+        top:50vh;
+        width: 100%;
+    }
+
+    #le_body_row_1_col_1_el_3 .element{
+        text-align: center;
+    }
+
+    #le_body_row_1_col_1_el_4{
+        position: absolute;
+        top:65vh;
+    }
+
+    .hero-section .cols{
+        padding-top: 0.5em !important;
+    }
+    .hero-section h1{
+        font-size: 0.75em;
+    }
+    .hero-section{
+        font-size: 2rem;
+    }
+
+    .hero-section p{
+        font-size:0.6em;
+    }
+
+    #le_body_row_1_col_1_el_4 h2{
+        font-size: 0.75em !important;
+    }
+
+    .hero-section::before{
+        height: 100vh;
+        top: vh;
+    }
+
+    figure{
+        max-width:100px !important;
+        padding:0px !important;
+    }
+    .inline-list{
+        display:block;
+
+    }
+
+.leaders .element{
+        text-align: center;
+    }
+
+    .leaders .element .op-text-block{
+        display: inline;
+    }
+
+    figure{
+        display: inline-block;
+    }
+
+
+    .leaders-section .op-text-block ul {
+    margin-left: 0px !important;
+
+    }
+
+    .inline-list li {
+    white-space: initial;
+    }
+
+    .leaders-section{
+        padding-bottom: 0px !important;
+    }
+
+    canvas {
+    width: 150px;
+    height: 150px;
+    border: 7px solid #f0efef;
+    border-radius: 50%;
+    padding: 5px;
+    -webkit-box-shadow: inset 0px 0px 0px 15px #e0e1e0;
+    -moz-box-shadow: inset 0px 0px 0px 15px #e0e1e0;
+    box-shadow: inset 0px 0px 0px 15px #e0e1e0;
+    }
+
+    .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]) {
+        line-height: 18px;
+        /* height: 60px; */
+        max-width: 25%;
+    }
+
+    .gform_previous_button {
+    margin-bottom: 0px !important;
+    background-image: url(http://emotionalgrit.com/wp-content/uploads/2016/08/prev-arrow.png) !important;
+    background-size: cover !important;
+    text-align: right !important;
+    background-repeat: no-repeat !important;
+
+
+    }
+
+    .gform_wrapper .gform_page_footer input.button{
+    margin: 0px !important;
+    }
+}
+
+/* Changes Aug 14th */
+
+#le_body_row_1_col_1_el_2 p {
+    font-size: 1em;
+}
+
+@media (min-width: 485px) and (max-width: 1026px){
+    .hero-section h1{
+        font-size: 1.5em
+    }
+    .hero-section p{
+        font-size: 0.6em;
+    }
+
+    #le_body_row_1_col_1_el_2 p {
+        font-size: 0.8em;
+    }
+}
